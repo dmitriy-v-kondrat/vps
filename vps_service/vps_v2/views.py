@@ -43,4 +43,3 @@ class ChoiceStatusVPS(UpdateAPIView):
     serializer_class = ChoiceStatusVPSSerializer
     queryset = VPS.objects.all()
     lookup_field = 'uid'
-
