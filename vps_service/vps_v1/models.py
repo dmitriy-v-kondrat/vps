@@ -30,4 +30,3 @@ class VPS(models.Model):
     ram = models.PositiveSmallIntegerField(verbose_name='объем RAM', help_text='Гб')
     hdd = models.PositiveSmallIntegerField(verbose_name='объем HDD', help_text='Тб')
     status = models.CharField(max_length=7, choices=SERVER_STATUS, verbose_name='статус сервера')
-
