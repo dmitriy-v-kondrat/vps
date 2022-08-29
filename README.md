@@ -23,5 +23,44 @@
 Считаю что в рамках задания вариант излишен, однако для расширения возможностей сервиса необходим. Пользователь также выбирает 
 "комплектацию" сервера из доступного.
 
+## Установка и настройка
+Клонировать проект
+```
+https://github.com/dmitriy-v-kondrat/vps.git
+```
+Создать виртуальное окружение
+```
+python -m venv venv
+```
+Активировать
+```
+venv\Scripts\activate.bat
+```
+Установить зависимости
+```
+pip install -r requirements.txt
+```
+Создать .env файл и заполнить
+```
+SECRET_KEY='ваш ключ'
+```
+Перейти в каталог приложения, создать миграции
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+Для vps_v2 создать статику
+```
+python manage.py collectstatic
+```
+Для vps_v3 создать супер-юзера
+```
+python manage.py createsuperuser
+```
+Запустить сервер
+```
+python manage.py runserver
+```
+
 ## License
 [MIT License](LICENSE.md) (c) dmitriy.v.kondrat
